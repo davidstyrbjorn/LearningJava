@@ -25,6 +25,15 @@ public class Main {
         dog.makeSound(); // Calling abstract method
         */
 
+        Circle circle = new Circle(3);
+        //System.out.println(circle.getArea());
 
+        Rectangle rect = new Rectangle(2, 4);
+        //System.out.println(rect.getPointCount());
+
+        Shape shape = rect;
+        System.out.println(shape.getPointCount());
+        shape = circle;
+        System.out.println(shape.getPointCount());
     }
 }
