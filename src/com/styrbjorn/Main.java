@@ -1,6 +1,7 @@
 package com.styrbjorn;
 
 import com.inhertiance.*;
+import java.util.*;
 
 public class Main {
 
@@ -25,6 +26,11 @@ public class Main {
         dog.makeSound(); // Calling abstract method
         */
 
+        /*
+        com.inheritance
+        Interface Shape class
+         */
+        /*
         Circle circle = new Circle(3);
         //System.out.println(circle.getArea());
 
@@ -35,5 +41,6 @@ public class Main {
         System.out.println(shape.getPointCount());
         shape = circle;
         System.out.println(shape.getPointCount());
+        */
     }
 }
