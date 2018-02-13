@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
         /*
         // Creating GuessTheNumber object
 	    GuessTheNumber game = new GuessTheNumber();
@@ -42,5 +42,5 @@ public class Main {
         shape = circle;
         System.out.println(shape.getPointCount());
         */
-    }
+    //}
 }
