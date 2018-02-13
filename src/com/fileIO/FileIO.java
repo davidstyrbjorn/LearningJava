@@ -1,35 +1,20 @@
 package com.fileIO;
 
-import java.nio.charset.StandardCharsets;
-import java.util.*;
-import java.io.*;
-import java.nio.file.*;
+import java.io.IOException;
+import java.util.LinkedList;
 
 public class FileIO {
 
-    public static void main(String[] args) throws  IOException {
+    public static void main(String[] args) throws IOException {
 
         /* Student & StudentBook example */
-        LinkedList<Student> studentList = new LinkedList<>();
-        Scanner reader = new Scanner(System.in);
-
-        // Register students
-        while(true){
-            System.out.println("Name then enter, then GPA, Q to quit");
-            String name = reader.nextLine();
-            if(name.toLowerCase().equals("q")){
-                break;
-            }
-            String gpa = reader.nextLine();
-            if(gpa.toLowerCase().equals(("q"))){
-                break;
-            }
-
-            Student newStudent = new Student(name, Double.parseDouble(gpa));
-            studentList.add(newStudent);
+        StudentBook book = new StudentBook();
+        book.createNewStudentsList();
+        book.saveStudentsToFile();
+        LinkedList<Student> temp = book.getStudentsFromFile();
+        for(Student student : temp){
+            System.out.println(student.toString());
         }
-
-        StudentBook book = new StudentBook(studentList);
 
         /* NO. 1 */
         /* This will append to an existing file, it will NOT create a new file if the file is not found */
