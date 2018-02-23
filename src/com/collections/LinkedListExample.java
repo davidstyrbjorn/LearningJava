@@ -53,6 +53,7 @@ public class LinkedListExample {
         // LinkedList -> dynamic size
 
         ListUtility.printListElements(integerList);
+
     }
 
 }
